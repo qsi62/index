@@ -10,6 +10,3 @@ workflows:
           flutter build ios --release
     artifacts:
       - build/ios/iphoneos/*.ipa
-    publishing:
-      distribution:
-        type: app_store
