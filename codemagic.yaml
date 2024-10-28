@@ -1,0 +1,15 @@
+workflows:
+  ios-build:
+    name: iOS build
+    scripts:
+      - name: Install dependencies
+        script: |
+          flutter pub get
+      - name: Build iOS app
+        script: |
+          flutter build ios --release
+    artifacts:
+      - build/ios/iphoneos/*.ipa
+    publishing:
+      distribution:
+        type: app_store
